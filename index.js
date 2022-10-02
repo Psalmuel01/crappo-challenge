@@ -1,0 +1,48 @@
+const coins = document.querySelectorAll(".coin"),
+img = document.querySelectorAll(".coin .img"),
+button = document.querySelectorAll(".coin button")
+
+coins[0].addEventListener("mouseover", () => {
+    coins[0].classList.remove("unhighlight")
+    coins[0].classList.add("highlight")
+    coins[1].classList.remove("highlight")
+    coins[1].classList.add("unhighlight")
+    coins[2].classList.remove("highlight")
+    coins[2].classList.add("unhighlight")
+    img[0].classList.add("hidden")
+    button[0].classList.remove("hidden")
+    img[1].classList.remove("hidden")
+    button[1].classList.add("hidden")
+    img[2].classList.remove("hidden")
+    button[2].classList.add("hidden")
+})
+
+coins[1].addEventListener("mouseover", () => {
+    coins[0].classList.remove("highlight")
+    coins[0].classList.add("unhighlight")
+    coins[1].classList.remove("unhighlight")
+    coins[1].classList.add("highlight")
+    coins[2].classList.remove("highlight")
+    coins[2].classList.add("unhighlight")
+    img[0].classList.remove("hidden")
+    button[0].classList.add("hidden")
+    img[1].classList.add("hidden")
+    button[1].classList.remove("hidden")
+    img[2].classList.remove("hidden")
+    button[2].classList.add("hidden")
+})
+
+coins[2].addEventListener("mouseover", () => {
+    coins[0].classList.remove("highlight")
+    coins[0].classList.add("unhighlight")
+    coins[1].classList.remove("highlight")
+    coins[1].classList.add("unhighlight")
+    coins[2].classList.remove("unhighlight")
+    coins[2].classList.add("highlight")
+    img[0].classList.remove("hidden")
+    button[0].classList.add("hidden")
+    img[1].classList.remove("hidden")
+    button[1].classList.add("hidden")
+    img[2].classList.add("hidden")
+    button[2].classList.remove("hidden")
+})
