@@ -125,7 +125,7 @@ h6 {
 
 /* Why Crappo Section */
 
-#why-crappo {
+.why-crappo {
     padding: 3% 7%;
 }
 
@@ -133,7 +133,7 @@ h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}    
+}
 
 .stats-info {
     display: flex;
@@ -155,12 +155,26 @@ h6 {
 
 .content-img {
     width: 55%;
+    position: relative;
+    animation: mymove 1.5s ease-in-out 2s;
+}
+
+@keyframes mymove {
+    from {
+        top: -100px;
+    }
+
+    to {
+        top: 0px;
+    }
 }
 
 .content-text {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    position: relative;
+    animation: mymove 1s ease-out 4s;
 }
 
 .content-text p {
@@ -174,9 +188,14 @@ h6 {
     position: relative;
     padding: 3% 7% 10%;
     text-align: center;
+}
+
+.amount-text {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
+    position: relative;
+    animation: mymove 1.5s ease-in-out 6s;
 }
 
 .calculations {
@@ -190,6 +209,8 @@ h6 {
     right: 25%;
     bottom: -50%;
     box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+    /* position: relative; */
+    animation: mymove 1.5s ease-in-out 8s;
 }
 
 form {
@@ -307,7 +328,7 @@ h5 {
 
 .investment-text {
     display: flex;
-    gap: 16px;
+    gap: 15px;
     flex-direction: column;
     width: 25%;
     margin-left: 100px;
@@ -392,10 +413,6 @@ h5 {
     margin-top: 40px;
 }
 
-
-
-/* 1233-960 (bonus 70%)
-foot, coin - 760 */
 
 @media only screen and (max-width: 1233px) {
     .hero-text .bonus {
@@ -533,7 +550,7 @@ foot, coin - 760 */
     }
 
     .hero-text .bonus {
-        width: 60%;
+        width: 55%;
     }
 
     .stats {
@@ -571,11 +588,24 @@ foot, coin - 760 */
     }
 
     .amount {
-        margin-bottom: 70px;
+        margin-bottom: 15%;
     }
 
     .calculations {
-        bottom: -90%;
+        bottom: -120%;
+        height: fit-content;
+    }
+
+    form, input, select {
+        display: block;
+        margin: auto;
+        margin-bottom: 5%;
+        width: 65% !important;
+    }
+
+    .revenue {
+        text-align: center;
+        margin-top: unset;
     }
 
     .col-4 {
@@ -601,10 +631,6 @@ foot, coin - 760 */
         margin: auto;
         margin-bottom: 20px;
     }
-
-    /* .investment-details:nth-child(3) {
-        justify-content: flex-start;
-    } */
 
     .investment-text:nth-child(2) {
         margin-left: auto;
@@ -644,10 +670,30 @@ foot, coin - 760 */
     }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 700px) {
 
     .hero-text .bonus {
-        width: 80%;
+        width: 60%;
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+
+    .hero-text .bonus {
+        width: 65%;
+    }
+
+    .amount {
+        margin-bottom: 20%;
+    }
+
+    .calculations {
+        bottom: -130%;
+    }
+
+    form, input, select {
+        width: 80% !important;
     }
 
     #footer {
@@ -696,4 +742,61 @@ foot, coin - 760 */
         width: 35%;
     }
 
+}
+
+@media only screen and (max-width: 600px) {
+    .hero-text .bonus {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .hero-text .bonus {
+        width: 75%;
+    }
+
+    .amount {
+        margin-bottom: 25%;
+    }
+
+    .calculations {
+        bottom: -135%;
+    }
+
+    form, input, select {
+        width: 90% !important;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .hero-text .bonus {
+        width: 80%;
+    }
+   
+    .amount {
+        margin-bottom: 0;
+    }
+
+    .calculations {
+        position: static;
+        width: 80%;
+        padding: 3%;
+        /* bottom: -130%; */
+    }
+
+    form, input, select {
+        width: 90% !important;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .hero-text .bonus {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .hero-text .bonus {
+        width: 100%;
+    }
 }
