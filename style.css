@@ -155,8 +155,6 @@ h6 {
 
 .content-img {
     width: 55%;
-    position: relative;
-    animation: mymove 1.5s ease-in-out 2s;
 }
 
 @keyframes mymove {
@@ -173,8 +171,6 @@ h6 {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    position: relative;
-    animation: mymove 1s ease-out 4s;
 }
 
 .content-text p {
@@ -194,8 +190,6 @@ h6 {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    position: relative;
-    animation: mymove 1.5s ease-in-out 6s;
 }
 
 .calculations {
@@ -209,8 +203,6 @@ h6 {
     right: 25%;
     bottom: -50%;
     box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
-    /* position: relative; */
-    animation: mymove 1.5s ease-in-out 8s;
 }
 
 form {
@@ -311,6 +303,7 @@ h5 {
     position: relative;
     background-color: #2B076E;
     padding: 5%;
+    padding-top: 7%;
 }
 
 .investment h4 {
@@ -565,6 +558,7 @@ h5 {
 
     .stats-info {
         margin-bottom: 7%;
+        gap: 20px;
     }
 
     .content {
@@ -619,6 +613,7 @@ h5 {
     
     .investment {
         width: unset;
+        padding-top: 10%;
     }
     
     .investment-details {
